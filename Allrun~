@@ -41,7 +41,7 @@ while [  $COUNTER -lt 10 ]; do
     rm -rf log.*
     rm -rf processor*
     runApplication decomposePar
-    runParallel `getApplication` $procNew
+    runParallel `getApplication` 2
     reconstructParMesh -mergeTol 1e-06
     runApplication reconstructPar    
     COUNTER=`expr $COUNTER + 1`
